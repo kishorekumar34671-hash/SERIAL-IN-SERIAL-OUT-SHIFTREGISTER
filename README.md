@@ -34,6 +34,21 @@ Each D flip-flop in the circuit has a Data (D) input, a Clock (CLK) input, and a
 Developed by:KISHORE KUMAR B
 RegisterNumber:212225240073
 ```
+```
+module SHIFT(clk, sin, q);
+input clk;
+input sin;
+output [3:0] q;
+reg [3:0] q;
+always @(posedge clk)
+begin
+q[0] <= sin;
+q[1] <= q[0];
+q[2] <= q[1];
+q[3] <= q[2];
+end
+endmodule
+```
 
 
 
@@ -46,4 +61,5 @@ RegisterNumber:212225240073
 
 
 **RESULTS**
+Thus the Serial-In Serial-Out shift register is implemented and verified.
 
